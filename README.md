@@ -100,6 +100,7 @@ Ensure the following tools are installed:
 Start the development environment:
 
 ```bash
+cp env.example .env
 pnpm dev
 ```
 
