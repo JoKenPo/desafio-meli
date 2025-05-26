@@ -4,6 +4,7 @@
 import { getI18n } from "@/utils/getI18n";
 import Image from "next/image";
 import Link from "next/link";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 interface ProductHeaderProps {
   suggestions: string[];
@@ -15,7 +16,7 @@ export default function ProductHeader({ suggestions }: ProductHeaderProps) {
   return (
     <header className="w-full text-sm">
       <div className="bg-yellow-400 mx-auto flex items-center justify-between px-8 py-8">
-        <div className="max-w-screen-xl w-[1280px] m-auto flex items-center gap-4">
+        <div className="max-w-screen-xl w-[1280px] m-auto flex justify-between gap-4">
           {/* Logo */}
           <Link href="/" className="text-lg font-bold text-blue-900">
             <Image
@@ -25,6 +26,7 @@ export default function ProductHeader({ suggestions }: ProductHeaderProps) {
               height={34}
             />
           </Link>
+          <LanguageSwitcher />
         </div>
       </div>
 
