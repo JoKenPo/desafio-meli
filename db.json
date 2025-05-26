@@ -1,0 +1,129 @@
+{
+  "products": [
+    {
+      "id": "a55-256gb-azul-escuro",
+      "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul escuro 8 GB RAM",
+      "price": 439,
+      "discount": 12,
+      "installments": {
+        "amount": 10,
+        "value": 19.14
+      },
+      "tags": [
+        "BEST_SELLER",
+        "NEW"
+      ],
+      "rating": {
+        "value": 4.5,
+        "count": 120
+      },
+      "images": {
+        "full": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_777643-MLA75395342152_042024-F.webp"
+        ],
+        "preview": [
+          "https://http2.mlstatic.com/D_Q_NP_2X_800035-MLA81367078349_122024-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_2X_621964-MLA81364948571_122024-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp"
+        ]
+      },
+      "color": "Azul escuro",
+      "variations": [
+        {
+          "sku": "a55-256gb-azul-escuro",
+          "name": "Azul escuro",
+          "primaryImage": "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp"
+        },
+        {
+          "sku": "a55-256gb-azul-celeste",
+          "name": "Azul celeste",
+          "primaryImage": "https://http2.mlstatic.com/D_Q_NP_2X_726160-MLA75549316245_042024-R.webp"
+        }
+      ],
+      "ram": "8 GB",
+      "storage": "256 GB",
+      "description": [
+        "Memoria RAM: 8 GB",
+        "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida",
+        "Memoria interna de 256 GB"
+      ],
+      "seller": {
+        "name": "Samsung",
+        "logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_2.png?$568_N_PNG$"
+      },
+      "suggestions": [
+        "celular em oferta",
+        "iphone xr",
+        "oppo",
+        "moto g84",
+        "celular 5g",
+        "a54",
+        "loja samsung oficial"
+      ]
+    },
+    {
+      "id": "a55-256gb-azul-celeste",
+      "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul celeste 8 GB RAM",
+      "price": 450,
+      "discount": 0,
+      "installments": {
+        "amount": 10,
+        "value": 45
+      },
+      "tags": [
+        "NEW"
+      ],
+      "rating": {
+        "value": 4.8,
+        "count": 210
+      },
+      "images": {
+        "full": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_736429-MLA79484975017_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_701458-MLA79484809287_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_726160-MLA75549316245_042024-F.webp"
+        ],
+        "preview": [
+          "https://http2.mlstatic.com/D_Q_NP_2X_736429-MLA79484975017_092024-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_2X_701458-MLA79484809287_092024-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_2X_726160-MLA75549316245_042024-R.webp"
+        ]
+      },
+      "color": "Azul celest",
+      "variations": [
+        {
+          "sku": "a55-256gb-azul-escuro",
+          "name": "Azul escuro",
+          "primaryImage": "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp"
+        },
+        {
+          "sku": "a55-256gb-azul-celeste",
+          "name": "Azul celeste",
+          "primaryImage": "https://http2.mlstatic.com/D_Q_NP_2X_726160-MLA75549316245_042024-R.webp"
+        }
+      ],
+      "ram": "8 GB",
+      "storage": "256 GB",
+      "description": [
+        "Memoria RAM: 8 GB",
+        "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida",
+        "Memoria interna de 256 GB"
+      ],
+      "seller": {
+        "name": "Samsung",
+        "logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_2.png?$568_N_PNG$"
+      },
+      "suggestions": [
+        "celular em oferta",
+        "iphone xr",
+        "oppo",
+        "moto g84",
+        "celular 5g",
+        "a54",
+        "loja samsung oficial"
+      ]
+    }
+  ]
+}
