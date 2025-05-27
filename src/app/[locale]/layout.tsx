@@ -18,11 +18,13 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: AcceptedLanguages };
 }) {
+
+  const { locale } = await params
 
   return (
     <html lang={locale} suppressHydrationWarning>

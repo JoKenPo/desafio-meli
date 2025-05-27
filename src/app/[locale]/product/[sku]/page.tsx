@@ -52,7 +52,8 @@ export interface Product {
   suggestions: string[];
 }
 
-export default async function ProductPage({ params: { sku } }: { params: { sku: string } }) {
+export default async function ProductPage({ params }: { params: { sku: string } }) {
+  const { sku } = await params;
   const res = await getProduct(sku);
   const product: Product = await res;
 
@@ -83,7 +84,7 @@ export default async function ProductPage({ params: { sku } }: { params: { sku: 
           <div className="space-y-4">
             <PurchaseBox product={product} />
             <StoreInfo product={product} />
-            <PaymentInfoBox />
+            <PaymentInfoBox product={product} />
           </div>
         </div>
 

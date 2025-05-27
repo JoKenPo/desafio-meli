@@ -1,18 +1,23 @@
 "use client";
 
 import { getI18n } from '@/utils/getI18n';
-import { FC, useState } from 'react';
+import { FC, JSX, useState } from 'react';
 import renderStars from './RatingStars';
 import ColorSelector from './ColorSelector';
 import { Product } from '@/app/[locale]/product/[sku]/page';
 import Image from 'next/image';
-import { HeartIcon } from '@radix-ui/react-icons';
+import { HeartFilledIcon, HeartIcon } from '@radix-ui/react-icons';
 
 interface ProductDetailsProps {
   product: Product;
 }
-const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
+function ProductDetails({ product }: ProductDetailsProps): JSX.Element {
   const [selectedColor, setSelectedColor] = useState(product.id);
+  const [favorited, setFavorited] = useState(false);
+
+  function toggleFavorite() {
+    setFavorited((prev) => !prev);
+  }
 
   const discountedPrice = product.price * (1 - product.discount / 100);
 
@@ -38,8 +43,12 @@ const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
       <div className="flex">
         <div className="flex items-center justify-between gap-4 gap-2 w-full justify-between">
           <div className="text-xs font-semibold">{translate('ACCESS STORE')}</div>
-          <button className="text-BLUE">
-            <HeartIcon width={30} height={30} />
+          <button onClick={toggleFavorite} className="text-BLUE">
+            {favorited ? (
+              <HeartFilledIcon width={30} height={30} />
+            ) : (
+              <HeartIcon width={30} height={30} />
+            )}
           </button>
         </div>
       </div>
