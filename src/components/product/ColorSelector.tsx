@@ -2,7 +2,6 @@
 
 import { ProductVariation } from '@/app/[locale]/product/[sku]/page';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
 
 interface ColorSelectorProps {
   options: ProductVariation[];
@@ -11,7 +10,6 @@ interface ColorSelectorProps {
 }
 
 export default function ColorSelector({ options, active }: ColorSelectorProps) {
-  const [selected, setSelected] = useState(active);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -24,7 +22,7 @@ export default function ColorSelector({ options, active }: ColorSelectorProps) {
   return (
     <div className="flex gap-4 overflow-x-auto py-2">
       {options.map(({ name, sku, primaryImage }) => {
-        const isSelected = selected === sku;
+        const isSelected = active === sku;
         return (
           <button
             key={name}

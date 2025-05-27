@@ -18,44 +18,6 @@ export function link(text: string, searchedKey: string | null): string {
   return addLinkAnchors(textEscape);
 }
 
-export function addMarkdownLinks(text: string): string | any {
-  if (text) return text?.replaceAll(REGEX, match => `[${match}](${match})`);
-  return text
-}
-
-export function tag(text: string): JSX.Element {
-  return <span dangerouslySetInnerHTML={{ __html: text }} />;
-}
-
-function replace(
-  text: string,
-  matches: RegExpMatchArray,
-  toReplace: string,
-  chart: string
-) {
-  let formatted = text
-  const chartRegex = new RegExp('\\' + chart, 'g')
-  matches.forEach((match) => {
-    if (match) {
-      formatted = formatted.replace(
-        match,
-        `<${toReplace}>${match.replace(chartRegex, '')}</${toReplace}>`
-      )
-    }
-  })
-  return formatted
-}
-
-export function applyBoldText(text: string) {
-  let formatted = text
-  const boldRegex = /(?:^\*|\s\*)(([\S]|\s)+?)(?:\*)/g
-  const matches = formatted.match(boldRegex)
-  if (matches) {
-    formatted = replace(text, matches, 'b', '*')
-  }
-  return <span dangerouslySetInnerHTML={{ __html: formatted }} />;
-}
-
 export function applyBreakLine(text: string) {
   let formatted = text;
   const boldRegex = /(?:^|\s)\*((?:\\\*|[^\*])+?)\*/g;

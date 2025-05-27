@@ -2,67 +2,139 @@ import { render, screen } from '@testing-library/react';
 import ProductPage from './page';
 import * as productsService from '@/services/products';
 
-const mockProduct = [{
-  id: '1',
-  title: 'Test Product',
-  price: 100,
-  discount: 10,
+jest.mock('next/navigation', () => {
+  const actual = jest.requireActual('next/navigation');
+  return {
+    ...actual,
+    useRouter: jest.fn(() => ({
+      push: jest.fn(),
+      replace: jest.fn(),
+      refresh: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+    })),
+    usePathname: jest.fn(() => '/'),
+    useSearchParams: jest.fn(() => new URLSearchParams()),
+  };
+});
+
+const mockProduct = {
+  id: "a55-256gb-azul-escuro",
+  title: "Samsung Galaxy A55 5G Dual SIM 256 GB azul escuro 8 GB RAM",
+  price: 439,
+  discount: 12,
   installments: {
-    amount: 3,
-    value: 30
+    amount: 10,
+    value: 19.14,
   },
-  tags: ['tag1', 'tag2'],
+  tags: ["BEST_SELLER", "NEW"],
   rating: {
     value: 4.5,
-    count: 100
+    count: 120,
   },
   images: {
-    full: ['image1.jpg', 'image2.jpg'],
-    preview: ['image1-preview.jpg', 'image2-preview.jpg']
+    full: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_777643-MLA75395342152_042024-F.webp",
+    ],
+    preview: [
+      "https://http2.mlstatic.com/D_Q_NP_2X_800035-MLA81367078349_122024-R.webp",
+      "https://http2.mlstatic.com/D_Q_NP_2X_621964-MLA81364948571_122024-R.webp",
+      "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp",
+    ],
   },
-  color: 'Black',
-  variations: [{
-    sku: '1',
-    name: 'Test Product',
-    primaryImage: 'image1.jpg'
-  }],
-  ram: '8GB',
-  storage: '256GB',
-  description: ['Description line 1', 'Description line 2'],
+  color: "Azul escuro",
+  variations: [
+    {
+      sku: "a55-256gb-azul-escuro",
+      name: "Azul escuro",
+      primaryImage:
+        "https://http2.mlstatic.com/D_Q_NP_2X_777643-MLA75395342152_042024-R.webp",
+    },
+    {
+      sku: "a55-256gb-azul-celeste",
+      name: "Azul celeste",
+      primaryImage:
+        "https://http2.mlstatic.com/D_Q_NP_2X_726160-MLA75549316245_042024-R.webp",
+    },
+  ],
+  ram: "8 GB",
+  storage: "256 GB",
+  description: [
+    "Memoria RAM: 8 GB",
+    "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida",
+    "Memoria interna de 256 GB",
+  ],
+  descriptionFull:
+    "O Galaxy A55 é um smartphone que combina design elegante com tecnologia avançada, oferecendo uma experiência completa aos usuários. Equipado com um poderoso processador Octa-core e tela Super AMOLED de 6,6 polegadas, proporciona imagens nítidas e cores vibrantes. Sua taxa de atualização de 120 Hz garante uma visualização suave e sem borrões, ideal para jogos e vídeos.\nUma das principais características deste dispositivo é sua impressionante câmera traseira tripla de 50 MP + 12 MP + 5 MP, que permite tirar fotos detalhadas e vívidas em qualquer ambiente. A câmera frontal de 32 MP garante selfies de alta qualidade. Além disso, o Galaxy A55 oferece armazenamento generoso de 256 GB, expansível até 1 TB com um cartão microSD, garantindo espaço suficiente para todos os seus arquivos, fotos e vídeos.\nCom conectividade 5G, o Galaxy A55 proporciona velocidades de download e upload ultra rápidas, além de uma experiência de navegação suave e sem interrupções. Seu sistema operacional Android oferece acesso a uma ampla gama de aplicativos e serviços. Com uma bateria de 5000 mAh, este smartphone oferece longas horas de uso, permitindo que você aproveite ao máximo todas as suas atividades diárias.\n-------------------------------------------------------------------------------------------\nDIMENSÕES E PESO:\nAltura: 16,1 cm\nLargura: 7,7 cm\nProfundidade: 0,8 cm\nPeso: 213 g\n",
   seller: {
-    name: 'Test Seller',
-    logo: 'logo.jpg'
+    name: "Samsung",
+    logo: "https://http2.mlstatic.com/D_NQ_NP_998532-MLA74841001840_032024-G.jpg",
+    banner:
+      "https://http2.mlstatic.com/D_NQ_NP_880338-MLA74840874324_032024-OO.jpg",
   },
-  suggestions: ['Suggestion 1', 'Suggestion 2']
-}];
+  specs: [
+    {
+      icon: "cellphone_size",
+      value: "6.6\" (16.11 cm x 7.74 cm x 8.2 mm)",
+    },
+    {
+      icon: "internal_memory",
+      value: "256 GB",
+    },
+    {
+      icon: "resolution_rear_camera",
+      value: "50 Mpx",
+    },
+    {
+      icon: "nfc",
+      value: "Sim",
+    },
+    {
+      icon: "resolution_front_camera",
+      value: "32 Mpx",
+    },
+    {
+      icon: "fingerprint",
+      value: "Impressão digital e reconhecimento facial",
+    },
+  ],
+  suggestions: [
+    "celular em oferta",
+    "iphone xr",
+    "oppo",
+    "moto g84",
+    "celular 5g",
+    "a54",
+    "loja samsung oficial",
+  ]
+};
 
 jest.mock('@/services/products', () => ({
-  getProduct: jest.fn((id) => { return mockProduct[id] }),
+  getProduct: jest.fn((id) => { return mockProduct }),
 }));
 
 describe('ProductPage', () => {
-
-  beforeEach(() => {
-    (productsService.getProduct as jest.Mock).mockResolvedValue(mockProduct);
-  });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
   it('should render product details', async () => {
-    const jsx = await ProductPage({ params: { sku: '1' } });
+    const jsx = await ProductPage({ params: { sku: 'a55-256gb-azul-escuro' } });
     render(jsx);
 
-    expect(screen.getByText('Test Product')).toBeInTheDocument();
-    expect(screen.getByText('$100')).toBeInTheDocument();
-    expect(screen.getByText('Test Seller')).toBeInTheDocument();
+    expect(screen.getByText('Samsung Galaxy A55 5G Dual COM 256 GB azul escuro 8 GB RAM')).toBeInTheDocument();
+    expect(screen.getByText('$439')).toBeInTheDocument();
+    expect(screen.getByText('Samsung')).toBeInTheDocument();
   });
 
   it('should call getProduct with correct sku', async () => {
-    const jsx = await ProductPage({ params: { sku: '1' } });
+    const jsx = await ProductPage({ params: { sku: 'a55-256gb-azul-escuro' } });
     render(jsx);
 
-    expect(productsService.getProduct).toHaveBeenCalledWith('1');
+    expect(productsService.getProduct).toHaveBeenCalledWith('a55-256gb-azul-escuro');
   });
 });
