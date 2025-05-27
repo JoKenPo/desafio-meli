@@ -40,16 +40,17 @@ However, I recognize that in larger systems, isolating the design system into a 
 
 ---
 
+## Improves
+
+If the project also included custom component development, integrating Storybook would be ideal. This would increase maintainability and scalability as the project grows.
+
+
+
 ## Considerations
-
-I'd like to explain that due to the time constraint I had to work on this project (approximately 12 hours), I wasn't able to deliver everything.
-
-The following items remained pending:
-* Tests
-* Stock endpoint
 
 The difficulties I faced were:
 I had considerable difficulty working with **App Router**. As it's a new feature, I encountered many errors and found few solutions online, requiring significant personal analysis and troubleshooting. For instance, the **internationalization (i18n)** part ended up taking a lot of time because of this.
+Also, for the same reason, I had some difficulty setting up testing using Jest in Next 14 with i18n. So I had to read and re-read a lot of documentation.
 
 I'm grateful for the opportunity and managed to learn a lot about the new version of Next.js through this project.
 
@@ -97,7 +98,7 @@ Ensure the following tools are installed:
 
 ## ⚙️ How to Run
 
-Start the development environment:
+Clone the example .env and start the development environment:
 
 ```bash
 cp env.example .env
