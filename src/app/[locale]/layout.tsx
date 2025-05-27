@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "../globals.css";
 import "@radix-ui/themes/styles.css";
 
 import Providers from "@/components/Providers";
 import { AcceptedLanguages } from "@/services/i18n.config";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const MontserratSans = Montserrat({
+  variable: "--font-montserrat-sans",
   subsets: ["latin"],
 });
 
@@ -31,7 +26,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${MontserratSans.variable} antialiased`}>
         <Providers locale={locale}>
           {children}
         </Providers>

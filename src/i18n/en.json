@@ -18,6 +18,7 @@
     "VISIT_STORE": "Visit official store",
     "SUGGESTION TITLE": "You might also be interested in:",
     "INTEREST FREE": "interest-free",
+    "ACCESS STORE": "Access the official store of",
     "PAYMENT METHODS": "View payment methods and promotions",
     "ALL COUNTRY": "all country",
     "DELIVERY_DESCRIPTION": "See delivery times and methods.",
@@ -32,6 +33,17 @@
     "FREE_RETURN_DESC": "You have 30 days from delivery to return it.",
     "PURCHASE_PROTECTION": "Purchase Protection",
     "PURCHASE_PROTECTION_DESC": "Get the item you expected or your money back.",
-    "WARRANTY": "1 year factory warranty"
+    "WARRANTY": "1 year factory warranty",
+    "BACK TO LIST": "Back to list",
+    "PRODUCT SPECIFICATIONS": "Product specifications",
+    "PRODUCT DESCRIPTION": "Description",
+    "specs": {
+      "cellphone_size": "Screen size",
+      "internal_memory": "Internal memory",
+      "resolution_rear_camera": "Main rear camera",
+      "resolution_front_camera": "Main front camera",
+      "nfc": "With NFC",
+      "fingerprint": "Unlock method"
+    }
   }
 }

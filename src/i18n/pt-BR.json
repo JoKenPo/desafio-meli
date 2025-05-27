@@ -18,6 +18,7 @@
     "VISIT_STORE": "Ir à loja oficial",
     "SUGGESTION TITLE": "Você também pode estar interessado:",
     "INTEREST FREE": "sem juros",
+    "ACCESS STORE": "Acesse a Loja Oficial de",
     "PAYMENT METHODS": "Ver meios de pagamento e promoções",
     "ALL COUNTRY": "todos os países",
     "DELIVERY_DESCRIPTION": "Learn about delivery times and methods.",
@@ -26,12 +27,23 @@
     "QUANTITY": "Quantidade",
     "UNIT": "unidade",
     "UNITS": "unidades",
-    "AVAILABLE_QUANTITY": "(+50 disponíveis)",
+    "AVAILABLE_QUANTITY": "+50 disponíveis",
     "SALES_VOLUME": "mais de 5 mil vendas",
     "FREE_RETURN": "Devolução grátis",
     "FREE_RETURN_DESC": "Você tem 30 dias a partir do recebimento.",
     "PURCHASE_PROTECTION": "Compra Protegida",
     "PURCHASE_PROTECTION_DESC": "Receba o produto esperado ou seu dinheiro de volta.",
-    "WARRANTY": "1 ano de garantia de fábrica"
+    "WARRANTY": "1 ano de garantia de fábrica",
+    "BACK TO LIST": "Voltar à lista",
+    "PRODUCT SPECIFICATIONS": "Características do produto",
+    "PRODUCT DESCRIPTION": "Descrição",
+    "specs": {
+      "cellphone_size": "Tamanho da tela",
+      "internal_memory": "Memória interna",
+      "resolution_rear_camera": "Camera traseira principal",
+      "resolution_front_camera": "Camera frontal principal",
+      "nfc": "Com NFC",
+      "fingerprint": "Desbloqueio"
+    }
   }
 }

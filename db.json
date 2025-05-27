@@ -49,10 +49,38 @@
         "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida",
         "Memoria interna de 256 GB"
       ],
+      "descriptionFull": "O Galaxy A55 é um smartphone que combina design elegante com tecnologia avançada, oferecendo uma experiência completa aos usuários. Equipado com um poderoso processador Octa-core e tela Super AMOLED de 6,6 polegadas, proporciona imagens nítidas e cores vibrantes. Sua taxa de atualização de 120 Hz garante uma visualização suave e sem borrões, ideal para jogos e vídeos.\nUma das principais características deste dispositivo é sua impressionante câmera traseira tripla de 50 MP + 12 MP + 5 MP, que permite tirar fotos detalhadas e vívidas em qualquer ambiente. A câmera frontal de 32 MP garante selfies de alta qualidade. Além disso, o Galaxy A55 oferece armazenamento generoso de 256 GB, expansível até 1 TB com um cartão microSD, garantindo espaço suficiente para todos os seus arquivos, fotos e vídeos.\nCom conectividade 5G, o Galaxy A55 proporciona velocidades de download e upload ultra rápidas, além de uma experiência de navegação suave e sem interrupções. Seu sistema operacional Android oferece acesso a uma ampla gama de aplicativos e serviços. Com uma bateria de 5000 mAh, este smartphone oferece longas horas de uso, permitindo que você aproveite ao máximo todas as suas atividades diárias.\n-------------------------------------------------------------------------------------------\nDIMENSÕES E PESO:\nAltura: 16,1 cm\nLargura: 7,7 cm\nProfundidade: 0,8 cm\nPeso: 213 g\n",
       "seller": {
         "name": "Samsung",
-        "logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_2.png?$568_N_PNG$"
+        "logo": "https://http2.mlstatic.com/D_NQ_NP_998532-MLA74841001840_032024-G.jpg",
+        "banner": "https://http2.mlstatic.com/D_NQ_NP_880338-MLA74840874324_032024-OO.jpg"
       },
+      "specs": [
+        {
+          "icon": "cellphone_size",
+          "value": "6.6\" (16.11 cm x 7.74 cm x 8.2 mm)"
+        },
+        {
+          "icon": "internal_memory",
+          "value": "256 GB"
+        },
+        {
+          "icon": "resolution_rear_camera",
+          "value": "50 Mpx"
+        },
+        {
+          "icon": "nfc",
+          "value": "Sim"
+        },
+        {
+          "icon": "resolution_front_camera",
+          "value": "32 Mpx"
+        },
+        {
+          "icon": "fingerprint",
+          "value": "Impressão digital e reconhecimento facial"
+        }
+      ],
       "suggestions": [
         "celular em oferta",
         "iphone xr",
@@ -111,10 +139,38 @@
         "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida",
         "Memoria interna de 256 GB"
       ],
+      "descriptionFull": "O Galaxy A55 é um smartphone que combina design elegante com tecnologia avançada, oferecendo uma experiência completa aos usuários. Equipado com um poderoso processador Octa-core e tela Super AMOLED de 6,6 polegadas, proporciona imagens nítidas e cores vibrantes. Sua taxa de atualização de 120 Hz garante uma visualização suave e sem borrões, ideal para jogos e vídeos.\nUma das principais características deste dispositivo é sua impressionante câmera traseira tripla de 50 MP + 12 MP + 5 MP, que permite tirar fotos detalhadas e vívidas em qualquer ambiente. A câmera frontal de 32 MP garante selfies de alta qualidade. Além disso, o Galaxy A55 oferece armazenamento generoso de 256 GB, expansível até 1 TB com um cartão microSD, garantindo espaço suficiente para todos os seus arquivos, fotos e vídeos.\nCom conectividade 5G, o Galaxy A55 proporciona velocidades de download e upload ultra rápidas, além de uma experiência de navegação suave e sem interrupções. Seu sistema operacional Android oferece acesso a uma ampla gama de aplicativos e serviços. Com uma bateria de 5000 mAh, este smartphone oferece longas horas de uso, permitindo que você aproveite ao máximo todas as suas atividades diárias.\n-------------------------------------------------------------------------------------------\nDIMENSÕES E PESO:\nAltura: 16,1 cm\nLargura: 7,7 cm\nProfundidade: 0,8 cm\nPeso: 213 g\n",
       "seller": {
         "name": "Samsung",
-        "logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_2.png?$568_N_PNG$"
+        "logo": "https://http2.mlstatic.com/D_NQ_NP_998532-MLA74841001840_032024-G.jpg",
+        "banner": "https://http2.mlstatic.com/D_NQ_NP_880338-MLA74840874324_032024-OO.jpg"
       },
+      "specs": [
+        {
+          "icon": "cellphone_size",
+          "value": "6.6\" (16.11 cm x 7.74 cm x 8.2 mm)"
+        },
+        {
+          "icon": "internal_memory",
+          "value": "256 GB"
+        },
+        {
+          "icon": "resolution_rear_camera",
+          "value": "50 Mpx"
+        },
+        {
+          "icon": "nfc",
+          "value": "Sim"
+        },
+        {
+          "icon": "resolution_front_camera",
+          "value": "32 Mpx"
+        },
+        {
+          "icon": "fingerprint",
+          "value": "Impressão digital e reconhecimento facial"
+        }
+      ],
       "suggestions": [
         "celular em oferta",
         "iphone xr",

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import ProductPage from './page';
 import * as productsService from '@/services/products';
 
-const mockProduct = {
+const mockProduct = [{
   id: '1',
   title: 'Test Product',
   price: 100,
@@ -34,10 +34,10 @@ const mockProduct = {
     logo: 'logo.jpg'
   },
   suggestions: ['Suggestion 1', 'Suggestion 2']
-};
+}];
 
 jest.mock('@/services/products', () => ({
-  getProduct: jest.fn((id) => (mockProduct)),
+  getProduct: jest.fn((id) => { return mockProduct[id] }),
 }));
 
 describe('ProductPage', () => {

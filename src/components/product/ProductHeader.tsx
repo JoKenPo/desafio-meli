@@ -30,21 +30,21 @@ export default function ProductHeader({ suggestions }: ProductHeaderProps) {
         </div>
       </div>
 
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 px-8 py-2 text-gray-600 text-xs">
-        <div className="max-w-screen-xl mx-auto">
-          <Link href="#">Voltar à lista</Link> &gt;{" "}
-          <Link href="#">Celulares e Telefones</Link> &gt;{" "}
-          <Link href="#">Celulares e Smartphones</Link> &gt;{" "}
-          <Link href="#">Samsung</Link>
-        </div>
-      </div>
-
       {/* Interesse */}
       <div className="bg-gray-100 px-8 py-1 text-gray-800 text-xs">
         <div className="max-w-screen-xl mx-auto">
           {translate("SUGGESTION TITLE")}{" "}
-          <span className="text-blue-600">{suggestions.join(" - ")}</span>
+          <span className="">{suggestions.join(" - ")}</span>
+        </div>
+      </div>
+
+      {/* Breadcrumb */}
+      <div className="bg-gray-100 px-8 py-2 text-gray-600 text-xs">
+        <div className="max-w-screen-xl mx-auto text-BLUE">
+          <Link href="#">Voltar à lista</Link> &gt;{" "}
+          <Link href="#">Celulares e Telefones</Link> &gt;{" "}
+          <Link href="#">Celulares e Smartphones</Link> &gt;{" "}
+          <Link href="#">Samsung</Link>
         </div>
       </div>
     </header >

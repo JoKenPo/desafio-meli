@@ -5,6 +5,8 @@ import { FC, useState } from 'react';
 import renderStars from './RatingStars';
 import ColorSelector from './ColorSelector';
 import { Product } from '@/app/[locale]/product/[sku]/page';
+import Image from 'next/image';
+import { HeartIcon } from '@radix-ui/react-icons';
 
 interface ProductDetailsProps {
   product: Product;
@@ -18,7 +20,31 @@ const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold">{product.title}</h1>
+      <div className="flex items-center gap-2">
+        <Image
+          width={25}
+          height={25}
+          src={product.seller.logo}
+          alt={product.seller.name}
+          className="object-contain"
+        />
+        <div>
+          <div className="text-xs">
+            <button className="text-BLUE font-medium">{`${translate('ACCESS STORE')} ${product.seller.name}`}</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex">
+        <div className="flex items-center justify-between gap-4 gap-2 w-full justify-between">
+          <div className="text-xs font-semibold">{translate('ACCESS STORE')}</div>
+          <button className="text-BLUE">
+            <HeartIcon width={30} height={30} />
+          </button>
+        </div>
+      </div>
+
+      <h1 className="text-[22px] font-semibold">{product.title}</h1>
 
       <div className="flex items-center space-x-2">
         <span className="text-sm text-gray-700 flex">
@@ -61,6 +87,14 @@ const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
           ))}
         </ul>
       </div>
+
+      {/* <div className="pt-4">
+        <ProductSpecs
+          ram={product.ram}
+          storage={product.storage}
+          description={product.descriptionFull}
+        />
+      </div> */}
     </div>
   );
 };

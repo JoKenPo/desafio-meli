@@ -14,6 +14,9 @@ export default {
         GREEN: "var(--green)",
         BLUE: "var(--blue)",
       },
+      fontFamily: {
+        main: ["var(--font-montserrat-sans)"],
+      },
     },
   },
   plugins: [],

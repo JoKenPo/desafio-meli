@@ -96,7 +96,7 @@ const PurchaseBox: FC<PurchaseBoxProps> = ({ product }) => {
           </span>
         </li>
         <li className="flex items-start gap-2">
-          <LockClosedIcon width={25} height={25} className="mt-0.5" />
+          <LockClosedIcon width={20} height={20} className="mt-0.5" />
           <span>
             <strong className="text-BLUE cursor-pointer">
               {translate('PURCHASE_PROTECTION')}
