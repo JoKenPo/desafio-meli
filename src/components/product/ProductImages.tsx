@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 
 interface ProductImagesProps {
   images: {
@@ -11,7 +11,21 @@ interface ProductImagesProps {
 }
 
 const ProductImages: FC<ProductImagesProps> = ({ images }) => {
+  const zoomRef = useRef<HTMLDivElement>(null);
+
   const [activeIndex, setActiveIndex] = useState(0);
+  const [zoomVisible, setZoomVisible] = useState(false);
+  const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const bounds = zoomRef.current?.getBoundingClientRect();
+    if (!bounds) return;
+
+    const x = e.clientX - 180;
+    const y = e.clientY - 180;
+
+    setZoomPos({ x, y });
+  };
 
   return (
     <div className="grid grid-cols-5 gap-4 background-white">
@@ -40,7 +54,12 @@ const ProductImages: FC<ProductImagesProps> = ({ images }) => {
       </div>
 
       {/* Imagem principal */}
-      <div className="col-span-4 pr-4">
+      <div className="col-span-4 pr-4"
+
+        ref={zoomRef}
+        onMouseEnter={() => setZoomVisible(true)}
+        onMouseLeave={() => setZoomVisible(false)}
+        onMouseMove={handleMouseMove} >
         <Image
           loading="lazy"
           width={410}
@@ -50,8 +69,22 @@ const ProductImages: FC<ProductImagesProps> = ({ images }) => {
           alt={`Product ${activeIndex}`}
           className="max-w-full h-auto object-contain"
         />
+
+        {zoomVisible && (
+          <div
+            className="absolute w-32 h-32 border-2 border-blue-500 cursor-zoom-in"
+            style={{
+              top: zoomPos.y + 32,
+              left: zoomPos.x + 32,
+              backgroundImage: `url(${images.full[activeIndex]})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '500%',
+              backgroundPosition: `${(zoomPos.x / zoomRef.current!.offsetWidth) * 100}% ${(zoomPos.y / zoomRef.current!.offsetHeight) * 100}%`
+            }}
+          />
+        )}
       </div>
-    </div>
+    </div >
   );
 };
 
