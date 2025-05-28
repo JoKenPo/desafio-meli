@@ -27,12 +27,12 @@ export default async function RootLayout({
   const { locale } = await params
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${MontserratSans.variable} antialiased`}>
-        <Providers locale={locale}>
-          {children}
-        </Providers>
-      </body>
-    </html>
+    // <html lang={locale} suppressHydrationWarning>
+    // <body className={`${MontserratSans.variable} antialiased`}>
+    <Providers locale={locale}>
+      {children}
+    </Providers>
+    // </body>
+    // </html>
   );
 }

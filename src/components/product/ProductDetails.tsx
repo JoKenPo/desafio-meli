@@ -42,7 +42,7 @@ function ProductDetails({ product }: ProductDetailsProps): JSX.Element {
 
       <div className="flex">
         <div className="flex items-center justify-between gap-4 gap-2 w-full justify-between">
-          <div className="text-xs font-semibold">{translate('ACCESS STORE')}</div>
+          <div className="text-xs font-semibold">{translate('NEW PRODUCTS')}</div>
           <button onClick={toggleFavorite} className="text-BLUE">
             {favorited ? (
               <HeartFilledIcon width={30} height={30} />
