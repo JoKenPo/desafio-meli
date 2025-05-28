@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 
 export const acceptedLanguages = ['pt-BR', 'en', 'es'] as const
-const browserLanguage = navigator.language
+const browserLanguage = navigator?.language
 
 export const headerName = 'x-i18next-current-language'
 
